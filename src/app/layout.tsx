@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Kantumruy_Pro, Montserrat } from "next/font/google";
 import "./globals.css";
+import { NavbarComponent } from "@/component/navbar/navbarcomponent";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const kantumruy = Kantumruy_Pro({
+  subsets: ['khmer'],
+  weight: ['400', '700'],
+  display: 'swap',
+  variable: '--font-kantumruy',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+  variable: '--font-montserrat',
 });
 
 export const metadata: Metadata = {
@@ -25,8 +30,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${kantumruy.variable} ${montserrat.variable} antialiased`}
       >
+        <NavbarComponent />
         {children}
       </body>
     </html>
