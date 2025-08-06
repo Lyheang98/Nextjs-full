@@ -1,12 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import { Montserrat } from "next/font/google";
 
 export function NavbarComponent() {
   return (
-    <header className=" font-Montserrat font-medium lg:px-16 px-4 bg-white flex  flex-wrap items-center py-4 shadow-md">
-    <div className="flex-1 flex justify-between items-center">
-        <a href="/" className="text-xl">NextJS lesson</a>
+    <header className=" font-Montserrat lg:px-16 px-4 bg-white flex  flex-wrap items-center py-4 shadow-sm">
+    <div className="flex-1 font-bold flex justify-between items-center">
+        <Link href="/" className="text-xl">NextJS lesson</Link>
     </div>
 
     <label htmlFor="menu-toggle" className="pointer-cursor md:hidden block">
@@ -20,11 +19,12 @@ export function NavbarComponent() {
 
     <div className="hidden md:flex md:items-center md:w-auto w-full" id="menu">
         <nav>
-            <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-                <li><Link href="/" className="md:p-4 py-3 px-0 block">About Us</Link></li>
-                <li><Link href="/" className="md:p-4 py-3 px-0 block">Treatments</Link></li>
-                <li><Link href="/blog" className="md:p-4 py-3 px-0 block">Lesson</Link></li>
-                <li><Link href="/contact" className="md:p-4 py-3 px-0 block md:mb-0 mb-2">Dashboard</Link></li>
+            <ul className="md:flex items-center justify-between text-[14px] text-gray-700 pt-4 md:pt-0">
+                <li><Link href="/" className="md:p-4 py-2 px-0 block hover:text-sky-700">About Us</Link></li>
+                <li><Link href="/blog" className="md:p-4 py-2 px-0 block hover:text-sky-700">Blog</Link></li>
+                <li><Link href="" className="md:p-4 py-2 px-0 block hover:text-sky-700">Lesson</Link></li>
+                <li><Link href="/contact" className="md:p-4 py-2 px-0 block md:mb-0 mb-2 hover:text-sky-700">Dashboard</Link></li>
+                <li><Link href="/product" className="md:p-4 py-2 px-0 block md:mb-0 mb-2 hover:text-sky-700">Product</Link></li>
             </ul>
         </nav>
         <Link href="/login" className="md:ml-4 bg-sky-700 text-white px-4 py-1 rounded hover:bg-sky-900 transition duration-200">
