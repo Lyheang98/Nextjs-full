@@ -14,7 +14,7 @@ export  function BlogCard() {
       const response = await fetch("https://jsonplaceholder.typicode.com/posts");
       // after fetching the data, we convert it to JSON format
       const data = await response.json();
-      setBlog(data); // Set the state with the fetched data
+      setBlog(data); 
     };
     fetchData();
   }, []);
