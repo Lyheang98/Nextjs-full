@@ -22,12 +22,12 @@ export function NavbarComponent() {
             <ul className="md:flex items-center justify-between text-[14px] text-gray-700 pt-4 md:pt-0">
                 <li><Link href="/" className="md:p-4 py-2 px-0 block hover:text-sky-700">About Us</Link></li>
                 <li><Link href="/blog" className="md:p-4 py-2 px-0 block hover:text-sky-700">Blog</Link></li>
-                <li><Link href="" className="md:p-4 py-2 px-0 block hover:text-sky-700">Lesson</Link></li>
+                <li><Link href="/lesson" className="md:p-4 py-2 px-0 block hover:text-sky-700">Course</Link></li>
                 <li><Link href="/contact" className="md:p-4 py-2 px-0 block md:mb-0 mb-2 hover:text-sky-700">Dashboard</Link></li>
                 <li><Link href="/product" className="md:p-4 py-2 px-0 block md:mb-0 mb-2 hover:text-sky-700">Product</Link></li>
             </ul>
         </nav>
-        <Link href="/login" className="md:ml-4 bg-sky-700 text-white px-4 py-1 rounded hover:bg-sky-900 transition duration-200">
+        <Link href="/login" className="md:ml-4 bg-black text-white px-4 py-1 rounded hover:bg-sky-900 transition duration-200">
             Login
         </Link>
     </div>

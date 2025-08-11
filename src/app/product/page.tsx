@@ -6,7 +6,7 @@ import { Product } from "@/type/type";
 // Function to fetch products from the API
 // This function uses the fetch API to retrieve product data from a dummyjson endpoint
 async function fetchProduct(): Promise<Product[]> {
-  const res = await fetch('https://dummyjson.com/products');
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_API}product`);
   const data = await res.json();
   return data.products;
 }

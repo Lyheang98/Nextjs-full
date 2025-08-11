@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Kantumruy_Pro, Montserrat } from "next/font/google";
+import { Kantumruy_Pro, Montserrat, Urbanist } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { NavbarComponent } from "@/component/navbar/navbarcomponent";
-
+// nextjs google fonts config
 const kantumruy = Kantumruy_Pro({
   subsets: ['khmer'],
   weight: ['400', '700'],
@@ -10,12 +11,20 @@ const kantumruy = Kantumruy_Pro({
   variable: '--font-kantumruy',
 });
 
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  display: 'swap',
-  variable: '--font-montserrat',
-});
+// Local Fonts config
+const plusjarkata = localFont({
+  src: "../../public/fonts/PlusJakartaSans-SemiBold.ttf",
+  variable: "--font-urbanist",
+})
+
+// const montserrat = Montserrat({
+//   subsets: ['latin'],
+//   weight: ['400', '700'],
+//   display: 'swap',
+//   variable: '--font-montserrat',
+// });
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,10 +39,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${kantumruy.variable} ${montserrat.variable} antialiased`}
-      >
+        className={`${kantumruy.variable} ${plusjarkata.variable} antialiased`}
+      > 
         <NavbarComponent />
-        {children}
+          {children}
       </body>
     </html>
   );

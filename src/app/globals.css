@@ -9,7 +9,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-kantumruy);
-  --font-mono: var(--font-montserrat);
+  /* --font-mono: var(--font-montserrat); */
+  --font-plusjakarta: var(--font-plusjakartasans);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,5 +24,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Kantumruy Pro", sans-serif;
-   font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "plusjakarta", sans-serif;
+  
 }
