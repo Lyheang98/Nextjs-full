@@ -1,6 +1,5 @@
-import { BlogCard } from "@/component/blogcard/blogcardcomponent";
-import { NavbarComponent } from "@/component/navbar/navbarcomponent";
 import LessonFile from "@/component/courseinfo/courseinfo";
+import CourseCards from "@/component/courseinfo/course-cards";
 import React from "react";
 
 export default function Home() {
@@ -10,6 +9,7 @@ export default function Home() {
       <div>
         <LessonFile />
       </div>
+      <CourseCards />
     </div>
   );
 }

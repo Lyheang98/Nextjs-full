@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function LessonFile() {
     return (
      
-            <section className=" py-5 px-6">
-              <div className="max-w-8xl p-10 mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <section className=" py-5 px-6 animate-fade-in-up">
+              <div className="max-w-8xl px-6 md:px-10 py-6 md:py-10 mx-auto grid md:grid-cols-2 gap-6 md:gap-10 items-center">
                 {/* Left Content */}
                 <div>
                   <h1 className="text-5xl font-bold text-gray-900 leading-snug">
@@ -52,17 +52,18 @@ export default function LessonFile() {
         
                 {/* Right Image */}
                 <div className="flex justify-center">
-                  <div className="bg-gradient-to-tr from-gray-300 to-gray-700 rounded-2xl overflow-hidden p-6">
-                    {/* Optimazation images by NExt JS */}
-                    <Image
-                      src="/images/img_javascript_intro.png" // replace with your image
-                      alt="Developer"
-                      width={900}
-                      height={800}
-                      priority
-                      unoptimized
-                      className="rounded-lg"
-                    />
+                  <div className="bg-gradient-to-tr from-gray-300 to-gray-700 rounded-2xl overflow-hidden w-full animate-float-slow">
+                    {/* Optimized responsive image */}
+                    <div className="relative w-full aspect-[4/3] sm:aspect-[5/3] lg:aspect-[16/9]">
+                      <Image
+                        src="/images/img_javascript_intro.png"
+                        alt="Developer"
+                        fill
+                        priority
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 900px"
+                        className="rounded-lg object-cover object-center"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
